@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaria test</title>
+    <!-- {% load static %} -->
+    <!-- <style>
+        body {
+        background-color: red;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: rgb(8, 0, 0);
+        color: rgb(160, 120, 120);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+        /* form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        padding: 20px;
+    }
+
+    label {
+        color: yellow; 
+    }
+
+    input[type="text"] {
+        width: calc(100% - 16px); 
+        padding: 8px;
+        box-sizing: border-box;
+    } */
+   
+
+    </style> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> -->
+</head>
+<body>
+    <h1>MALARIA TEST</h1>
+    <form action="{% url 'results' %}">
+        {% csrf_token %}
+
+        <label for="">wbc_count</label>
+        <input type="text" name="wbc_count">
+        <label for="">rbc_count</label>
+        <input type="text" name="rbc_count">
+        <label for="">hb_level</label>
+        <input type="text" name="hb_level"><br><br>
+        <label for="">hematocrit</label>
+        <input type="text" name="hematocrit">
+        <label for="">mean_cell_volume</label>
+        <input type="text" name="mean_cell_volume">
+        <label for="">mean_corp_hb</label>
+        <input type="text" name="mean_corp_hb"><br><br>
+        <label for="">mean_cell_hb_conc</label>
+        <input type="text" name="mean_cell_hb_conc">
+        <label for="">platelet_count</label>
+        <input type="text" name="platelet_count">
+        <label for="">platelet_distr_width</label>
+        <input type="text" name="platelet_distr_width"><br><br>
+
+        <label for="">mean_platelet_vl</label>
+        <input type="text" name="mean_platelet_vl">
+        <label for="">neutrophils_percent</label>
+        <input type="text" name="neutrophils_percent">
+        <label for="">lymphocytes_percent</label>
+        <input type="text" name="lymphocytes_percent"><br><br>
+
+        <label for="">mixed_cells_percent</label>
+        <input type="text" name="mixed_cells_percent">
+        <label for="">neutrophils_count</label>
+        <input type="text" name="neutrophils_count">
+        <label for="">lymphocytes_count</label>
+        <input type="text" name="lymphocytes_count"><br><br>
+
+        <label for="">mixed_cells_count</label>
+        <input type="text" name="mixed_cells_count">
+        <label for="">RBC_dist_width_Percent</label>
+        <input type="text" name="RBC_dist_width_Percent">
+        <label for="">temperature</label>
+        <input type="text" name="temperature"><br><br><br><br>
+        <center>
+            <input type="submit" value="Submit">
+        </center>
+        
+    </form>
+</body>
+</html>
